@@ -18,6 +18,7 @@ cnpm i html-webpack-plugin -D
 // 安装clean-webpack-plugin
 cnpm i clean-webpack-plugin -D
 // 安装webpack-nerge(文件合并)  
-cnpm i webpack-merge -D
+cnpm i webpack-merge -D  
 ```
 
+ 
