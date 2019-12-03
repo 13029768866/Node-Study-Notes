@@ -2,7 +2,6 @@
 let bool: boolean = true
 let num: number | undefined | null = 123
 let str: string = 'wzj'
-
 // 数组
 let arr1: number[] = [1,2,3]
 let arr2: Array<number | string> = [1,2,3,'wzj']
