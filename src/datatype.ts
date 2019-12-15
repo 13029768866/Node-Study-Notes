@@ -4,28 +4,32 @@ let num: number | undefined | null = 123
 let str: string = 'wzj'
 // 数组
 let arr1: number[] = [1,2,3]
-let arr2: Array<number | string> = [1,2,3,'wzj']
+let arr2: Array<number | string> = [1,2,3,"4"]
 
 // 元组(类型数量必须对应)
+let tuple:[number,string] = [1, "2"]
 // 可以添加，不可访问（不推荐越界操作）
-let tuple: [number,string] = [0,"1"]
-/* tuple.push(2)
-console.log(tuple,tuple[2]) */
+/*tuple.push(2)
+console.log(tuple)
+console.log(tuple[2])*/
 
 // 函数(括号之外是函数返回值的类型（可省略）)
-let add = (x:number,y:number) : number => x + y
+let add = (x: number, y: number) => x + y
 // 也可以先定义函数参数及其返回值类型，再书写函数逻辑
-let compute : (x:number , y: number) => number
-compute = (a,b) => a + b
+let compute:(x: number, y: number) => number
+compute = (a, b) => a + b
 
 // 对象(对象属性类型一一映射)
-let obj: {x: number, y: number} = {x: 1,y: 2}
-obj.x = 3
-
+let obj: {
+    x: number,
+    y: number
+} = {
+    x: 1,
+    y: 2
+}
 // symbol
-let s1: symbol = Symbol()
+let s1:symbol = Symbol()
 let s2 = Symbol()
-console.log(s1 === s2)	// false
 
 // undefined,null(是其他类型的子类型，可以赋值给其他变量)
 // 需要修改tsconfig.json中strictNullChecks项为false
