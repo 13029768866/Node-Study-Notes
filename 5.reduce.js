@@ -49,5 +49,23 @@ const compose = (...fns) => {
   };
 };
 
+// const compose1 = (...fns) => {
+//   return fns.reduce(function (a, b) {
+//     return function (...args) {
+//       return a(b(...args));
+//     };
+//   });
+// };
+
+const compose1 = (...fns) =>
+  fns.reduce(
+    (a, b) =>
+      (...args) =>
+        a(b(...args))
+  );
+
 let final = compose(addPrefix, len, sum);
+let final1 = compose1(addPrefix, len, sum);
+
 console.log(final("a", "b"));
+console.log("final1", final1("a", "b"));
